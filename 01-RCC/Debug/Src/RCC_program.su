@@ -1,0 +1,4 @@
+../Src/RCC_program.c:16:14:MDIO_ErrorStateRccInt	24	static
+../Src/RCC_program.c:124:14:MDIO_ErrorstateRccSelectSysClock	24	static
+../Src/RCC_program.c:163:14:MDIO_ErrorStateRccPeripheralClockEnbale	24	static
+../Src/RCC_program.c:221:14:MDIO_ErrorStateRccPeripheralClockDisable	24	static

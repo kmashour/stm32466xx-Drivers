@@ -1,0 +1,229 @@
+11:04:09 **** Incremental Build of configuration Debug for project Stack_exercise ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc -o "Stack_exercise.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\ARM_AMGAD_WORKSPACE\Stack_exercise\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Stack_exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Stack_exercise.elf
+ 
+arm-none-eabi-size   Stack_exercise.elf 
+arm-none-eabi-objdump -h -S  Stack_exercise.elf  > "Stack_exercise.list"
+   text	   data	    bss	    dec	    hex	filename
+   5372	    108	   1588	   7068	   1b9c	Stack_exercise.elf
+Finished building: default.size.stdout
+ 
+Finished building: Stack_exercise.list
+ 
+12:09:13 **** Incremental Build of configuration Debug for project Stack_exercise ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:59:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   59 |     printf("result=%i",Ret);
+      |     ^~~~~~
+../Src/main.c:59:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Src/main.c:1:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+  +++ |+#include <stdio.h>
+    1 | /**
+../Src/main.c: In function 'SVC_Handler':
+../Src/main.c:69:2: warning: incompatible implicit declaration of built-in function 'printf'
+   69 |  printf("In the handler\n");
+      |  ^~~~~~
+../Src/main.c:69:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "Stack_exercise.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\ARM_AMGAD_WORKSPACE\Stack_exercise\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Stack_exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Stack_exercise.elf
+ 
+arm-none-eabi-size   Stack_exercise.elf 
+arm-none-eabi-objdump -h -S  Stack_exercise.elf  > "Stack_exercise.list"
+   text	   data	    bss	    dec	    hex	filename
+   5676	    108	   1588	   7372	   1ccc	Stack_exercise.elf
+Finished building: default.size.stdout
+ 
+Finished building: Stack_exercise.list
+ 
+12:09:35 **** Incremental Build of configuration Debug for project Stack_exercise ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Stack_exercise.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\ARM_AMGAD_WORKSPACE\Stack_exercise\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Stack_exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Stack_exercise.elf
+ 
+arm-none-eabi-size   Stack_exercise.elf 
+arm-none-eabi-objdump -h -S  Stack_exercise.elf  > "Stack_exercise.list"
+   text	   data	    bss	    dec	    hex	filename
+   5676	    108	   1588	   7372	   1ccc	Stack_exercise.elf
+Finished building: default.size.stdout
+ 
+Finished building: Stack_exercise.list
+ 
+14:29:40 **** Incremental Build of configuration Debug for project Stack_exercise ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Stack_exercise.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\ARM_AMGAD_WORKSPACE\Stack_exercise\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Stack_exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Stack_exercise.elf
+ 
+arm-none-eabi-size   Stack_exercise.elf 
+arm-none-eabi-objdump -h -S  Stack_exercise.elf  > "Stack_exercise.list"
+   text	   data	    bss	    dec	    hex	filename
+   5676	    108	   1588	   7372	   1ccc	Stack_exercise.elf
+Finished building: default.size.stdout
+ 
+Finished building: Stack_exercise.list
+ 
+14:42:08 **** Incremental Build of configuration Debug for project Stack_exercise ****
+make -j8 all 
+arm-none-eabi-size   Stack_exercise.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5676	    108	   1588	   7372	   1ccc	Stack_exercise.elf
+Finished building: default.size.stdout
+ 
+15:11:27 **** Incremental Build of configuration Debug for project Stack_exercise ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc -o "Stack_exercise.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\ARM_AMGAD_WORKSPACE\Stack_exercise\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Stack_exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Stack_exercise.elf
+ 
+arm-none-eabi-size   Stack_exercise.elf 
+arm-none-eabi-objdump -h -S  Stack_exercise.elf  > "Stack_exercise.list"
+   text	   data	    bss	    dec	    hex	filename
+   5668	    108	   1588	   7364	   1cc4	Stack_exercise.elf
+Finished building: default.size.stdout
+ 
+Finished building: Stack_exercise.list
+ 
+15:12:07 **** Incremental Build of configuration Debug for project Stack_exercise ****
+make -j8 all 
+arm-none-eabi-size   Stack_exercise.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5668	    108	   1588	   7364	   1cc4	Stack_exercise.elf
+Finished building: default.size.stdout
+ 
+15:16:58 **** Incremental Build of configuration Debug for project Stack_exercise ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc -o "Stack_exercise.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\ARM_AMGAD_WORKSPACE\Stack_exercise\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Stack_exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Stack_exercise.elf
+ 
+arm-none-eabi-size   Stack_exercise.elf 
+arm-none-eabi-objdump -h -S  Stack_exercise.elf  > "Stack_exercise.list"
+   text	   data	    bss	    dec	    hex	filename
+   5668	    108	   1588	   7364	   1cc4	Stack_exercise.elf
+Finished building: default.size.stdout
+ 
+Finished building: Stack_exercise.list
+ 
+19:07:36 **** Build of configuration Debug for project AAPCS_exercise ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/main.c:36:6: error: conflicting types for 'fun_x'
+   36 | void fun_x(void)
+      |      ^~~~~
+../Src/main.c:22:5: note: previous declaration of 'fun_x' was here
+   22 | int fun_x(void);
+      |     ^~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+19:08:03 **** Build of configuration Debug for project 01-Hello_world ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c:19:10: fatal error: ../Inc/STD_TYPES.h: No such file or directory
+   19 | #include "../Inc/STD_TYPES.h"
+      |          ^~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+19:08:04 **** Incremental Build of configuration Debug for project AAPCS_exercise ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "AAPCS_exercise.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\ARM_AMGAD_WORKSPACE\AAPCS_exercise\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AAPCS_exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AAPCS_exercise.elf
+ 
+arm-none-eabi-size   AAPCS_exercise.elf 
+arm-none-eabi-objdump -h -S  AAPCS_exercise.elf  > "AAPCS_exercise.list"
+   text	   data	    bss	    dec	    hex	filename
+    704	      8	   1568	   2280	    8e8	AAPCS_exercise.elf
+Finished building: default.size.stdout
+ 
+Finished building: AAPCS_exercise.list
+ 
+19:08:32 **** Incremental Build of configuration Debug for project AAPCS_exercise ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "AAPCS_exercise.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\ARM_AMGAD_WORKSPACE\AAPCS_exercise\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AAPCS_exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AAPCS_exercise.elf
+ 
+arm-none-eabi-size   AAPCS_exercise.elf 
+arm-none-eabi-objdump -h -S  AAPCS_exercise.elf  > "AAPCS_exercise.list"
+   text	   data	    bss	    dec	    hex	filename
+   5416	    108	   1588	   7112	   1bc8	AAPCS_exercise.elf
+Finished building: default.size.stdout
+ 
+Finished building: AAPCS_exercise.list
+ 
+19:09:31 **** Incremental Build of configuration Debug for project AAPCS_exercise ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "AAPCS_exercise.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\ARM_AMGAD_WORKSPACE\AAPCS_exercise\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AAPCS_exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AAPCS_exercise.elf
+ 
+arm-none-eabi-size   AAPCS_exercise.elf 
+arm-none-eabi-objdump -h -S  AAPCS_exercise.elf  > "AAPCS_exercise.list"
+   text	   data	    bss	    dec	    hex	filename
+   5416	    108	   1588	   7112	   1bc8	AAPCS_exercise.elf
+Finished building: default.size.stdout
+ 
+Finished building: AAPCS_exercise.list
+ 
+19:13:51 **** Incremental Build of configuration Debug for project AAPCS_exercise ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "AAPCS_exercise.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\ARM_AMGAD_WORKSPACE\AAPCS_exercise\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AAPCS_exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AAPCS_exercise.elf
+ 
+arm-none-eabi-size   AAPCS_exercise.elf 
+arm-none-eabi-objdump -h -S  AAPCS_exercise.elf  > "AAPCS_exercise.list"
+   text	   data	    bss	    dec	    hex	filename
+   5416	    108	   1588	   7112	   1bc8	AAPCS_exercise.elf
+Finished building: default.size.stdout
+ 
+Finished building: AAPCS_exercise.list
+ 
+19:30:57 **** Incremental Build of configuration Debug for project AAPCS_exercise ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "AAPCS_exercise.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\ARM_AMGAD_WORKSPACE\AAPCS_exercise\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AAPCS_exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AAPCS_exercise.elf
+ 
+arm-none-eabi-size   AAPCS_exercise.elf 
+arm-none-eabi-objdump -h -S  AAPCS_exercise.elf  > "AAPCS_exercise.list"
+   text	   data	    bss	    dec	    hex	filename
+   5416	    108	   1588	   7112	   1bc8	AAPCS_exercise.elf
+Finished building: default.size.stdout
+ 
+Finished building: AAPCS_exercise.list
+ 
+11:21:25 **** Clean-only build of configuration Debug for project 04-AAPCS_exercise ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32f446retx.d ./Startup/startup_stm32f446retx.o
+rm -rf ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf AAPCS_exercise.elf AAPCS_exercise.list AAPCS_exercise.map default.size.stdout
+ 
+11:21:27 **** Build of configuration Debug for project 04-AAPCS_exercise ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "04-AAPCS_exercise.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\ARM_AMGAD_WORKSPACE\AAPCS_exercise\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="04-AAPCS_exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 04-AAPCS_exercise.elf
+ 
+arm-none-eabi-size   04-AAPCS_exercise.elf 
+arm-none-eabi-objdump -h -S  04-AAPCS_exercise.elf  > "04-AAPCS_exercise.list"
+   text	   data	    bss	    dec	    hex	filename
+   5416	    108	   1588	   7112	   1bc8	04-AAPCS_exercise.elf
+Finished building: default.size.stdout
+ 
+Finished building: 04-AAPCS_exercise.list
+ 

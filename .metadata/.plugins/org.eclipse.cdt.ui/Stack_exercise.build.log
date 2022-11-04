@@ -1,0 +1,17 @@
+15:16:58 **** Incremental Build of configuration Debug for project Stack_exercise ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc -o "Stack_exercise.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\ARM_AMGAD_WORKSPACE\Stack_exercise\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Stack_exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Stack_exercise.elf
+ 
+arm-none-eabi-size   Stack_exercise.elf 
+arm-none-eabi-objdump -h -S  Stack_exercise.elf  > "Stack_exercise.list"
+   text	   data	    bss	    dec	    hex	filename
+   5668	    108	   1588	   7364	   1cc4	Stack_exercise.elf
+Finished building: default.size.stdout
+ 
+Finished building: Stack_exercise.list
+ 
+
+15:16:58 Build Finished. 0 errors, 0 warnings. (took 536ms)
+

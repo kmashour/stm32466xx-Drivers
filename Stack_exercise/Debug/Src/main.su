@@ -1,0 +1,4 @@
+../Src/main.c:34:5:main	16	static,ignoring_inline_asm
+../Src/main.c:67:6:SVC_Handler	8	static
+../Src/main.c:71:6:Generate_Exception	4	static,ignoring_inline_asm
+../Src/main.c:76:5:Fun_Add	24	static

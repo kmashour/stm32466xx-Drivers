@@ -1,0 +1,48 @@
+#ifndef RCC_priv.h_
+#define RCC_priv.h_
+
+/*******************************************
+******** Peripheral bit number definitions**
+********************************************/
+
+
+
+/****RCC_CR BITS********/
+#define HSI 0
+#define HSIRDY 1
+#define HSITRIM 3        /*Bit 3->7 is for trim i.e 5bits*/
+#define HSICAL 8         /*READ ONLY 7 BITS*/
+#define HSEON 16
+#define HSERDY 17
+#define HSEBYP 18
+#define CSSON  19
+#define PLLON  24
+#define PLLRDY 25
+#define PLLI2SON 26
+#define PLLI2SRDY 27
+#define PLLSAION 28
+#define PLSAIRDY 29
+
+
+/****RCC_CFGR BITS********/
+#define SW 0
+#define SWS 1
+
+
+
+
+/*****RCC_CFGR OPTIONS***/
+#define RCC_SW_HSI 00
+#define RCC_SW_HSE 01
+#define RCC_SW_PLLP 10
+#define RCC_SW_PLLR 11
+
+
+
+
+
+
+
+
+
+#endif

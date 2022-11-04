@@ -1,0 +1,17 @@
+19:30:57 **** Incremental Build of configuration Debug for project AAPCS_exercise ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "AAPCS_exercise.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\ARM_AMGAD_WORKSPACE\AAPCS_exercise\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AAPCS_exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AAPCS_exercise.elf
+ 
+arm-none-eabi-size   AAPCS_exercise.elf 
+arm-none-eabi-objdump -h -S  AAPCS_exercise.elf  > "AAPCS_exercise.list"
+   text	   data	    bss	    dec	    hex	filename
+   5416	    108	   1588	   7112	   1bc8	AAPCS_exercise.elf
+Finished building: default.size.stdout
+ 
+Finished building: AAPCS_exercise.list
+ 
+
+19:30:58 Build Finished. 0 errors, 0 warnings. (took 1s.165ms)
+

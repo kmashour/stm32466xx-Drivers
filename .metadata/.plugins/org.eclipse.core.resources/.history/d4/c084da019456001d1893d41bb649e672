@@ -1,0 +1,55 @@
+#ifndef RCC_Int.h
+#define RCC_Int.h
+
+
+typedef enum {
+	{ ok=1;nok=0}ErrorState_t;
+	
+#define HSION 0
+#define HSIREADY 1
+#define HSITRIM 2
+#define HSICAL 3
+#define HSEON 4
+#define HSEREADY 5
+#define HSEBYP 6
+#define CSSON 7
+#define PLLON 8
+#define PLLRDY 9
+#define PLI2SON 10
+#define PLLI2SRDY 11
+#define PLLSAION 12
+#define PLLSAIRDY 13
+#define SW 14
+#define SWS 15
+	
+Errorstate_t RCC_ErrorStateRccInt(u8 A_u8CopySysClock );
+Errorstate_t RCC_ErrorStatePllConfig(/****/);
+ErrorState_t RCC_ErrorStatePeripheralClockEnbale(u8 A_u8CopyBusEnable , A_u8CopyPeripheralEnable); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif 

@@ -1,0 +1,73 @@
+#ifndef RCC_Int_H_
+#define RCC_Int_H_
+
+typedef enum
+	 {ok=1, nok=0 }ErrorState_t;
+
+/****Important macros****/
+#define AHB1 1
+#define AHB2 2
+#define AHB3 3
+#define APB1 4
+#define APB2 5
+#define APB3 6
+
+/****RCC_CR****/
+#define RCC_HSION HSION
+#define RCC_HSIREADY HSIRDY
+#define RCC_HSITRIM HSITRIM
+#define RCC_HSICAL HSICAL
+#define RCC_HSEON HSEON
+#define RCC_HSERDY HSERDY
+#define RCC_HSEBYP HSEBYP
+#define RCC_CSSON CSSON
+#define RCC_PLLON PLLON
+#define RCC_PLLRDY PLLRDY
+#define RCC_PLLI2SON PLLI2SON
+#define RCC_PLLI2SRDY PLLI2SRDY
+#define RCC_PLLSAION PLLSAION
+#define RCC_PLLSAIRDY PLSAIRDY
+/****RCC_CFGR**not completed**/
+#define RCC_SW SW
+#define RCC_SWS SWS
+/****RCC_AHB1RSTR**not completed**/
+#define RCC_GPIOA GPIOARST
+#define RCC_GPIOB GPIOBRST
+#define RCC_GPIOC GPIOCRST
+#define RCC_GPIOD GPIODRST
+#define RCC_GPIOE GPIOERST
+#define RCC_GPIOF GPIOFRST
+#define RCC_GPIOG GPIOGRST
+#define RCC_GPIOH GPIOHRST
+
+ErrorState_t RCC_ErrorStateRccInt(u8 A_u8CopyClockName ,u8 A_u8CopyClockState );
+ErrorState_t RCC_ErrorStatePllConfig(/****/);
+ErrorState_t RCC_ErrorStatePeripheralClockEnbale(u8 A_u8CopyBusEnable , u8 A_u8CopyPeripheralEnable);
+ErrorState_t RCC_ErrorStatePeripheralClockDisable(u8 A_u8CopyBusEnable , u8 A_u8CopyPeripheralEnable);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif 
